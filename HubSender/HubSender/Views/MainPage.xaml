@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+	x:Class="HubSender.Views.MainPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:views="clr-namespace:HubSender.Views"
+	mc:Ignorable="d"
+	>
+
+	<TabbedPage.Children>
+		<NavigationPage Title="Send">
+			<x:Arguments>
+				<views:Send />
+			</x:Arguments>
+		</NavigationPage>
+		<NavigationPage Title="Hub setup">
+			<x:Arguments>
+				<views:HubSettingsPage />
+			</x:Arguments>
+		</NavigationPage>
+		<NavigationPage Title="About">
+			<x:Arguments>
+				<views:AboutPage />
+			</x:Arguments>
+		</NavigationPage>
+	</TabbedPage.Children>
+
+</TabbedPage>

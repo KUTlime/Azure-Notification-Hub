@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+	x:Class="HubSender.Views.HubSettingsPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:vm="clr-namespace:HubSender.ViewModels"
+	Title="{Binding Title}"
+	mc:Ignorable="d"
+	>
+
+	<ContentPage.BindingContext>
+		<vm:HubSettingsViewModel />
+	</ContentPage.BindingContext>
+	<ContentPage.Content>
+		<StackLayout>
+			<Label
+				Padding="5,5,5,0"
+				Text="Notification Hub name:"
+				/>
+			<Entry
+				x:Name="Username"
+				Text="{Binding NotificationHubName, Mode=TwoWay}"
+				/>
+			<Label
+				Padding="5,20,5,0"
+				Text="Full Access Connection String:"
+				/>
+			<Entry
+				x:Name="Password"
+				IsPassword="True"
+				Text="{Binding FullAccessConnectionString, Mode=TwoWay}"
+				/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

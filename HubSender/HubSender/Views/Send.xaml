@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="HubSender.Views.Send"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:vm="clr-namespace:HubSender.ViewModels"
+	Title="{Binding Title}"
+	mc:Ignorable="d"
+	>
+	<ContentPage.Content>
+		<StackLayout>
+			<Label
+				Padding="5"
+				HorizontalOptions="CenterAndExpand"
+				Text="Please, setup the tag and the notification text payload."
+				VerticalOptions="Start"
+				/>
+			<Label
+				Padding="5"
+				Text="Tag:"
+				/>
+			<Editor
+				x:Name="Tag"
+				Text="omfg"
+				/>
+			<Label
+				Padding="5"
+				Text="Message body:"
+				/>
+			<Editor
+				x:Name="MessageText"
+				Text="Time to buy!"
+				VerticalOptions="StartAndExpand"
+				/>
+			<Label
+				x:Name="UserLog"
+				Padding="5"
+				VerticalOptions="EndAndExpand"
+				/>
+			<Button
+				Clicked="BtnSendNotificationAsync"
+				Text="Send"
+				/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
