@@ -15,5 +15,5 @@ This application will let you send a notification to designeted Azure Notificati
 7. Fill up the subsciber tag & the notification message.
 8. Press button **Send**.
 
-References:
+# References:
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
