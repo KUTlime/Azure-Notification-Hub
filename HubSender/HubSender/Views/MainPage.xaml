@@ -12,7 +12,7 @@
 	<TabbedPage.Children>
 		<NavigationPage Title="Send">
 			<x:Arguments>
-				<views:Send />
+				<views:SendPage />
 			</x:Arguments>
 		</NavigationPage>
 		<NavigationPage Title="Hub setup">

@@ -10,7 +10,7 @@ namespace HubSender.ViewModels
 		public AboutViewModel()
 		{
 			Title = "About";
-			OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://xamarin.com"));
+			OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://github.com/KUTlime/Azure-Notification-Hub"));
 		}
 
 		public ICommand OpenWebCommand { get; }

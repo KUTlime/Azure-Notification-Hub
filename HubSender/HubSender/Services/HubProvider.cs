@@ -1,5 +1,5 @@
 ﻿using System;
-
+using HubSender.Models;
 using Microsoft.Azure.NotificationHubs;
 
 using Xamarin.Forms;

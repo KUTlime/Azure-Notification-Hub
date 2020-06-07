@@ -1,5 +1,6 @@
 ﻿using System;
 
+using HubSender.Models;
 using HubSender.Services;
 using HubSender.Views;
 

@@ -1,4 +1,4 @@
-﻿namespace HubSender.Services
+﻿namespace HubSender.Models
 {
 	internal class HubSettings
 	{

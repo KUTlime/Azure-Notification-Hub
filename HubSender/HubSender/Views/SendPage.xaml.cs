@@ -12,12 +12,12 @@ using Xamarin.Forms.Xaml;
 namespace HubSender.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Send : ContentPage
+	public partial class SendPage : ContentPage
 	{
 		private UInt16 _messageCount = UInt16.MinValue;
 		private NotificationHubClient _hub;
 
-		public Send()
+		public SendPage()
 		{
 			InitializeComponent();
 		}
@@ -35,7 +35,7 @@ namespace HubSender.Views
 			try
 			{
 				_hub = HubProvider.GetHub();
-				foreach (var tag in Tag.Text.Split(';', ' ', ' '))
+				foreach (var tag in Tag.Text.Split(new[] { ';', ' ', ',', '\n' }, StringSplitOptions.RemoveEmptyEntries))
 				{
 					UserLog.Text += $"Sending notification #{++_messageCount} to {tag} category subscribers!\n";
 					var t = await Task.Run(
