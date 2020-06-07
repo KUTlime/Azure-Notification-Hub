@@ -64,10 +64,17 @@
 									FontSize="22"
 									Text="Azure Notification Hub Sender"
 									/>
-								<Span Text=" " />
+							</FormattedString.Spans>
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Label FontSize="22">
+					<Label.FormattedText>
+						<FormattedString>
+							<FormattedString.Spans>
 								<Span
 									ForegroundColor="{StaticResource LightTextColor}"
-									Text="1.0"
+									Text="1.0.0"
 									/>
 							</FormattedString.Spans>
 						</FormattedString>
