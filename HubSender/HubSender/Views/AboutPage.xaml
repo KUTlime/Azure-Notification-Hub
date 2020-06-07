@@ -74,8 +74,15 @@
 							<FormattedString.Spans>
 								<Span
 									ForegroundColor="{StaticResource LightTextColor}"
-									Text="1.0.0"
+									Text="{Binding VersionNumber}"
 									/>
+								<Span Text=" " />
+								<Span Text="(" />
+								<Span
+									ForegroundColor="{StaticResource LightTextColor}"
+									Text="{Binding BuildNumber}"
+									/>
+								<Span Text=")" />
 							</FormattedString.Spans>
 						</FormattedString>
 					</Label.FormattedText>
