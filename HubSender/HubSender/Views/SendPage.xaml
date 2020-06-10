@@ -47,7 +47,6 @@
 					<Label
 						x:Name="UserLog"
 						Padding="5"
-						BackgroundColor="Aquamarine"
 						VerticalOptions="EndAndExpand"
 						/>
 				</StackLayout>
