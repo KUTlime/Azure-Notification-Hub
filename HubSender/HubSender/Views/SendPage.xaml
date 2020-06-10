@@ -14,36 +14,44 @@
 	</ContentPage.BindingContext>
 	<ContentPage.Content>
 		<StackLayout>
-			<Label
-				Padding="5"
-				HorizontalOptions="CenterAndExpand"
-				Text="Please, setup the tag and the notification text payload."
-				VerticalOptions="Start"
-				/>
-			<Label
-				Padding="5,0,5,0"
-				Text="Tag:"
-				/>
-			<Editor
-				x:Name="Tag"
-				Placeholder="Separate multiple tags with space, semicolon or comma."
-				Text="{Binding SubscriberTag, Mode=TwoWay}"
-				/>
-			<Label
-				Padding="5,5,5,0"
-				Text="Notification message:"
-				/>
-			<Editor
-				x:Name="MessageText"
-				Placeholder="Text displayed in the notification area."
-				Text="{Binding NotificationMessage, Mode=TwoWay}"
-				VerticalOptions="StartAndExpand"
-				/>
-			<Label
-				x:Name="UserLog"
-				Padding="5"
-				VerticalOptions="EndAndExpand"
-				/>
+			<ScrollView
+				VerticalOptions="FillAndExpand"
+				VerticalScrollBarVisibility="Default"
+				>
+				<StackLayout>
+					<Label
+						Padding="5"
+						HorizontalOptions="CenterAndExpand"
+						Text="Please, setup the tag and the notification text payload."
+						/>
+					<Label
+						Padding="5,0,5,0"
+						Text="Tag:"
+						/>
+					<Editor
+						x:Name="Tag"
+						AutoSize="TextChanges"
+						Placeholder="Separate multiple tags with space, semicolon or comma."
+						Text="{Binding SubscriberTag, Mode=TwoWay}"
+						/>
+					<Label
+						Padding="5,5,5,0"
+						Text="Notification message:"
+						/>
+					<Editor
+						x:Name="MessageText"
+						AutoSize="TextChanges"
+						Placeholder="Text displayed in the notification area."
+						Text="{Binding NotificationMessage, Mode=TwoWay}"
+						/>
+					<Label
+						x:Name="UserLog"
+						Padding="5"
+						BackgroundColor="Aquamarine"
+						VerticalOptions="EndAndExpand"
+						/>
+				</StackLayout>
+			</ScrollView>
 			<Button
 				Clicked="BtnSendNotificationAsync"
 				Text="Send"
